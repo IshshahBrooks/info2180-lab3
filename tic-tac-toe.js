@@ -17,11 +17,11 @@ onload = function() {
     console.log('Clicked')
     if (game_player == game_x){
         game_player = game_o;
-        document.getElementById('board').getElementsByTagName('div')[i].className+=('X');
+        document.getElementById('board').getElementsByTagName('div')[i].className+=('O');
     }
     else{
       game_player= game_x;
-      document.getElementById('board').getElementsByTagName('div')[i].className+=('O');
+      document.getElementById('board').getElementsByTagName('div')[i].className+=('X');
     }
 
     track_state.push(gamesquares[i].innerHTML = game_player);

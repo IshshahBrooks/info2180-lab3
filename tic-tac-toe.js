@@ -33,7 +33,7 @@ onload = function() {
         game_square[i].addEventListener("mouseleave", event => {
         game_square[i].classList.remove('hover');
        });
-         
+      }
           check_Winner();
           function check_Winner(){
             let box0 = game_square[0].innerHTML;
@@ -79,10 +79,16 @@ onload = function() {
               game_stat.className+="you-won";
             }
           }
-          
-      
+      function game_restart(){
+        for (x = 0; x< game_square.lenght; x++){
+          game_square[x].classList.remove('O');
+          game_square[x].classList.remove('X');
+          document.getElementById("status").textContent = "Move your mouse over a square and click to play an X or an O.";
+          document.getElementById("status").classList.remove("you-won");
+          game_square[x].innerHTML= "";
+          current = game_x;
+          game_square[x].addEventListener("click", game_player, {once:true});
+        }
+      }    
+  }
     }
-    }
-      
-    }
-

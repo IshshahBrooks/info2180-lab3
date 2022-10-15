@@ -8,7 +8,7 @@ onload = function() {
 
   for ( i = 0; i < game_square.lenght; i++ ){
     game_square[i].className+=('square');
-    game_square[i].addEventListener("click", playclick )
+    game_square[i].addEventListener("click", playclick );
     
       var game_player;
       function game_player(){
